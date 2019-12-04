@@ -4,15 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.epam.javacourse112019</groupId>
-    <artifactId>java-training</artifactId>
+    <artifactId>webaps_step_1</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>maven_step_123</module>
-        <module>maven_step_456</module>
-        <module>webaps_step_1</module>
 
-    </modules>
-    <packaging>pom</packaging>
+    <parent>
+        <artifactId>java-training</artifactId>
+        <groupId>com.epam.javacourse112019</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
 </project>
