@@ -3,13 +3,13 @@ package io.qala.javatraining;
 
 import org.testng.annotations.Test;
 
-import java.io.FileInputStream;
+import java.io.InputStream;
 
 import static org.junit.Assert.assertEquals;
 
 public class FailingTest {
     @Test public void strangeFailure() throws Exception {
-        String file = ClassLoader.getSystemResource("myresource.txt").getFile();
-        assertEquals(new FileInputStream(file).read(), 49);
+        InputStream inputStream = getClass().getResourceAsStream("/myresource.txt");
+        assertEquals(inputStream.read(), 49);
     }
 }
