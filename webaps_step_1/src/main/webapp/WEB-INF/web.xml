@@ -1,0 +1,33 @@
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        version="3.0">
+
+    <servlet>
+        <servlet-name>HiServlet</servlet-name>
+        <servlet-class>com.epam.javacourse.servlets.HelloWorldServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HiServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>FirstFilter</filter-name>
+        <filter-class>com.epam.javacourse.filters.FirstFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FirstFilter</filter-name>
+        <servlet-name>HiServlet</servlet-name>
+    </filter-mapping>
+    <filter>
+        <filter-name>SecondFilter</filter-name>
+        <filter-class>com.epam.javacourse.filters.SecondFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecondFilter</filter-name>
+        <servlet-name>HiServlet</servlet-name>
+    </filter-mapping>
+</web-app>
