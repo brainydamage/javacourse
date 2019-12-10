@@ -18,6 +18,7 @@ public class FirstFilter implements Filter {
             return;
         }
 
+        System.out.println("Filter 1: STOP");
         HttpServletResponse resp = (HttpServletResponse) response;
         resp.getWriter().write("Request have been filtered by FirstFilter");
     }
