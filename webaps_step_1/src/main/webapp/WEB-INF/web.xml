@@ -20,7 +20,7 @@
     </filter>
     <filter-mapping>
         <filter-name>FirstFilter</filter-name>
-        <servlet-name>HiServlet</servlet-name>
+        <url-pattern>/filter</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>SecondFilter</filter-name>
@@ -28,6 +28,10 @@
     </filter>
     <filter-mapping>
         <filter-name>SecondFilter</filter-name>
-        <servlet-name>HiServlet</servlet-name>
+        <url-pattern>/filter</url-pattern>
     </filter-mapping>
+
+    <listener>
+        <listener-class>com.epam.javacourse.listeners.HelloServletContextListener</listener-class>
+    </listener>
 </web-app>
