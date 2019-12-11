@@ -18,6 +18,7 @@ public class SecondFilter implements Filter {
             return;
         }
 
+        System.out.println("Filter 2: STOP");
         HttpServletResponse resp = (HttpServletResponse) response;
         resp.getWriter().write("Request have been filtered by SecondFilter");
     }
